@@ -13,7 +13,7 @@ Data_Output::~Data_Output()
 
 
 ////////////////////////////////////////////////////////////////////////////////////setOutputType()
-//Sets the file type
+//Sets the output type
 //
 //Parameters:
 //		type			The type of file being parsed (e.g., csv, xml, ...)
@@ -22,7 +22,7 @@ Data_Output::~Data_Output()
 //
 //Pre:					All the parameters have not been initialized or set to values
 //Post:					The file type of the current file being parsed is changed
-//Called by:			Class I_Parser
+//Called by:			Class Data_Output
 //Calls:				none
 //
 void Data_Output::setOutputType(OutputType type){
@@ -30,7 +30,7 @@ void Data_Output::setOutputType(OutputType type){
 }
 
 ////////////////////////////////////////////////////////////////////////////////////getOutputType()
-//Returns the file type
+//Returns the output type
 //
 //Parameters:
 //		none
@@ -39,7 +39,7 @@ void Data_Output::setOutputType(OutputType type){
 //
 //Pre:					All the parameters have not been initialized or set to values
 //Post:					The file type of the current file being parsed is known
-//Called by:			Class I_Parser
+//Called by:			Class Data_Output
 //Calls:				none
 //
 OutputType Data_Output::getOutputType(){
