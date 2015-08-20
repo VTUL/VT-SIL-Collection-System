@@ -631,7 +631,7 @@ void DAQ::writeDAQDataToFile(){
 
     //CM 7/10/15 - change to using std::string
     //output->writeDaqDataToFile_standard_string(&sensorData,recordSize,sampleRate,&channelIDs, numPhysicalChannels, activeChannels, daqID);
-    output->writeDaqDataToFile_standard_string_remove_qt(&sensorData, recordSize, sampleRate, &channelIDs, numPhysicalChannels, activeChannelsStd, daqID);
+    output->writeDaqDataToFile(&sensorData, recordSize, sampleRate, &channelIDs, numPhysicalChannels, activeChannelsStd, daqID);
 
     //CM 7/17/15 - change to using a vector (or just write the double value as it comes from the SAFEARRAY)
     //output->writeDaqDataToFile_vector(&sensorData,recordSize,sampleRate,&channelIDs, numPhysicalChannels, activeChannels, daqID);

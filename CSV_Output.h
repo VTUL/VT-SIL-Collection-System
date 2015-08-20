@@ -16,7 +16,7 @@ public:
 
 
     //CM 5/18/15 - pass necessary information to write sensor data to CSV file
-    void writeDaqDataToFile_standard_string_remove_qt(std::vector<Sensor_Data*>* sensorData, int recordSize, double sampleRate, std::vector<std::string>* channelIDs, int numPhysicalChannels, std::list< std::pair<int,std::string> > activeChannels, std::string daqID);
+    void writeDaqDataToFile(std::vector<Sensor_Data*>* sensorData, int recordSize, double sampleRate, std::vector<std::string>* channelIDs, int numPhysicalChannels, std::list< std::pair<int,std::string> > activeChannels, std::string daqID);
 
     std::string getMoveDir(); //get the move directory
     void setMoveDir(std::string mvDir); //set the move directory

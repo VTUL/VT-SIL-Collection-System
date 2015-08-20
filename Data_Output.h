@@ -19,7 +19,7 @@ public:
 	virtual OutputType getOutputType();
 
     //CM 5/18/15 - virtual function to write data in the specific format to disk
-    void writeDaqDataToFile_standard_string_no_qt(std::vector<Sensor_Data*>* sensorData, int recordSize, double sampleRate, std::vector<std::string>* channelIDs, int numPhysicalChannels, std::list<std::pair<int, std::string> > activeChannels,std::string daqID);
+    void writeDaqDataToFile(std::vector<Sensor_Data*>* sensorData, int recordSize, double sampleRate, std::vector<std::string>* channelIDs, int numPhysicalChannels, std::list<std::pair<int, std::string> > activeChannels,std::string daqID);
 
 protected:
     OutputType outputType; //enum from library.h, define the specific output format being used, e.g., CSV or HDF5
