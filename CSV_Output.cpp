@@ -117,6 +117,13 @@ void CSV_Output::writeDaqDataToFile(std::vector<Sensor_Data*>* sensorData, int r
         int channelLoopCount = 0;
         //=======================
 
+        //CM 7/15/15 - testing time required for iterating and storing data into a string ============
+        clock_t start;
+        start = std::clock();
+        double duration = 0.0;
+        //double durationSum = 0.0;
+        //============================================================================================
+
 
         double *currentSensorDataDouble = NULL; //CM 8/10/15 - move definition outside of sensor loop
 
@@ -324,6 +331,10 @@ void CSV_Output::writeDaqDataToFile(std::vector<Sensor_Data*>* sensorData, int r
 
         }
 
+        //CM 7/15/15 - testing time required for iterating and storing data into a string ============
+        duration = (std::clock()-start) / (double) CLOCKS_PER_SEC;
+        std::cout<<"Time to iterate over data and store sensor data into string: "<<duration<<std::endl;
+
         outputCount++; //CM 3/18/15 - increment for next write to file
     }
     catch (...){
@@ -404,11 +415,13 @@ void CSV_Output::writeDaqDataToFile(std::vector<Sensor_Data*>* sensorData, int r
        system(moveCommand.c_str()); //move recent finished file
 
        //perform time benchmark testing for processing each file
+       /*
        double timeForCollection = 0.0;
        timeForCollection = endTimer();
        std::cout<<"-------------------------------------------------"<<std::endl;
        std::cout<<"Collection/Write cycle time lapse: "<<timeForCollection<<std::endl;
        std::cout<<"-------------------------------------------------"<<std::endl;
+       */
 
        currentFileName = "daq_data_"+std::to_string(currentWriteTime)+"_output.txt"; //CM 4/14/15 - create the new output file based on the current time
        headerWritten = false; //CM 5/19/15 - with the new file, signal the header needs to be written
