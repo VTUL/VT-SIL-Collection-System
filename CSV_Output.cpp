@@ -90,6 +90,9 @@ void CSV_Output::setfileLength(int fl){
 void CSV_Output::writeDaqDataToFile(std::vector<Sensor_Data*>* sensorData, int recordSize, double sampleRate, std::vector<std::string>* channelIDs, int numPhysicalChannels, list< pair<int,std::string> > activeChannels, std::string daqID){
     std::string fileName = "";
 
+    recordsCollected = 0; //CM 8/20/15 - reset when writing a new file. This is used to see how many records are actually beeing written to a file.
+                          //        If this is less than the specified file length in the config file, using this variable will accurately say how long
+                          //        a file actually is.
 
     int currentWriteTime = int(currentTimeSeconds()); //CM 4/14/15 - get the current (now) time for comparison to the last write time
 
@@ -352,7 +355,7 @@ void CSV_Output::writeDaqDataToFile(std::vector<Sensor_Data*>* sensorData, int r
     //  (before coming to this function) as the fileLength, hence recordsCollected "should" always equal fileLength
     //  when control reaches here.
 
-       recordsCollected = 0; //reset
+//       recordsCollected = 0; //reset
 
        //CM 8/12/15 - converting timestamp from DAQs to current date and time =============
        time_t t = firstTimeSecond;
@@ -392,8 +395,15 @@ void CSV_Output::writeDaqDataToFile(std::vector<Sensor_Data*>* sensorData, int r
        //header for file info: Time info for first sample in the file, sample rate, and length of the file in seconds
        Out << "Time Integer, Time Fraction, Sample Rate (samples per second), Length of file in seconds\n";
 
+       //debugging ========================== comparing the set file length to how many records are actually there,
+       //                                       this will be different than the file length when the system is
+       //                                       shutdown during a collection cycle.
+       //cout<<"Records collected: "<<recordsCollected<<endl;
+       //cout<<"File length: "<<fileLength<<endl;
+       //====================================
+
        //output the file info
-       Out <<to_string(firstTimeSecond)<<','<<to_string(firstTimeFraction)<<','<<sampleRate<<','<<fileLength<<'\n';
+       Out <<to_string(firstTimeSecond)<<','<<to_string(firstTimeFraction)<<','<<sampleRate<<','<<recordsCollected<<'\n';
 
        //header to describe what the data in the file is
        Out <<"Sensor Data organized by CSV columns. Each column represents the data from one channel on a specific DAQ\n";
