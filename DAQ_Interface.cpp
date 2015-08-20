@@ -1,4 +1,3 @@
-//#include "library.h"
 #include <iostream>
 #include <fstream>
 #include <vector>
@@ -46,17 +45,6 @@ DAQ_Interface::~DAQ_Interface(){
 
     close(); //CM 8/13/15 - close out the session for each DAQ - this releases any memory held by the DAQ(s)
 
-    /* CM 8/17/15 - double releasing memory!!
-    std::map<std::string, DAQ*>::iterator it;
-
-    //now delete the DAQ objects
-    for(it = daqObjects.begin();it != daqObjects.end(); it++){
-        delete it->second;
-    }
-    */
-
-    //close();
-
     }
     catch(...){
         //for now, just output an error message indicating where the error occured
@@ -72,8 +60,6 @@ void DAQ_Interface::daqBootStrap(std::vector<std::string> ipAddresses){
 	//now start collecting
 	collectDaqData(); //tell all daqs to collect data
 
-	//close out session(s) with DAQs
-//	close();
 
 }
 
@@ -93,10 +79,6 @@ int DAQ_Interface::initialize(std::vector<std::string> ipAddresses){
 	for (; it != ipAddresses.end(); it++){
         DAQ* temp = new DAQ(DEFAULT_BUFFER_SIZE); //create daq object with the default buffer size , i.e., number of records to grab before flushing for next collection sequence
 		std::string networkID = *it; //grab network ID
-
-        //debugging========================
-        //std::cout<<"DAQ ID: "<<networkID<<std::endl;
-        //=================================
 
 		temp->initialize(networkID); //initialize with the given network ID (IP address)
 		daqObjects.insert(std::pair<std::string, DAQ*>(networkID, temp)); //insert into map
@@ -136,8 +118,6 @@ void DAQ_Interface::collectDaqData(){
             }
 
         }
-        //CM 8/18/15 - change logic to write to file in the above loop, so comment this out
-        //writeDaqDataToFile();  //CM 3/18/15 - have all daqs write current data to file and remove data from memory
 
     }
 
