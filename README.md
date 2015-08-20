@@ -1,3 +1,1 @@
-testing synching between two computers
-
-now change from mac pro
+"DAQ-4W.local|DAQ-1W.local|DAQ-4E.local|DAQ-3E.local|DAQ-1E.local"
