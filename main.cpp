@@ -1,16 +1,9 @@
-//#include "plotWindow.h"
-//#include "daq_gui.h"
 #include "DAQ_Interface.h"
-
-//#include "themewidget.h"
-//#include "plotWindow.h"
 
 //command line format for all DAQs: "DAQ-4W.local|DAQ-4E.local|DAQ-3E.local|DAQ-1W.local|DAQ-1E.local"
 
 int main(int argc, char *argv[])
 {
-
-
 
     //create the daq interface object that will be controlling the actions of the daq(s)
     DAQ_Interface* daqInterface = new DAQ_Interface();
