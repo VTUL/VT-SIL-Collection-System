@@ -1,6 +1,3 @@
-//#include <QString>
-//#include <QStringList>
-
 //======= CM 5/8/15 - for sleep function ============
 #include <iostream>       // std::cout, std::endl
 #include <thread>         // std::this_thread::sleep_for
@@ -49,10 +46,6 @@ DAQ::DAQ(long int b)
 
         configParser = new Config_Parser(); //CM 6/1/15
 
-        //debugging =======
-        //cout<<"Buffer size set to: "<<bufferSize<<endl;
-        //=================
-
 	}
 	catch (...)
 	{
@@ -69,17 +62,6 @@ DAQ::~DAQ()
     try{
         std::cout<<"DAQ deconstructor called"<<std::endl;
 
-        /* CM 8/13/15 - move to close() function
-        delete output;
-        delete configParser;
-
-        std::vector<Sensor_Data*>::iterator it;
-
-        //clean up memory for the sensor data vector stored
-        for(it = sensorData.begin(); it != sensorData.end(); it++){
-            delete *it;
-        }
-        */
         close();
     }
     catch(...){
@@ -138,57 +120,23 @@ int DAQ::initialize(std::string ipAddress){
 
             driver->Measurement->NumRecordsPerTrigger = 0; //CM 4/13/15 - set to 0 when performing continuous collection, otherwise, set to >= 1
 
-            /*
+
             //==== CM 6/1/15 - load the configuration file============================
-            //get the numerical number of the DAQ:
-            int daqNum = 0; //store the numberical ID of the DAQ
 
-            for(int x=0;x < daqID.size();x++){
-                if(QChar::isNumber(daqID.at(x)) == true){
-                    daqNum = QChar::digitValue(daqID.at(x)); // convert to number, returns -1 if not a number
-
-                    //check to make sure it is a number (double checking)
-                    if(daqNum == -1){
-                        std::cout<<"DAQ number is invalid!!!!"<<std::endl;
-                    }
-
-                }
-            }
-
-            if(daqNum == -1){
-                std::cout<<"Cannot connect to DAQ with number ID: "<<daqNum<<std::endl;
-                return 0;
-            }
-            */
-
-            //display what the numerical number of the daq is
-            //std::cout<<"DAQ numerical ID: "<<daqNum<<std::endl;
-
-            //configParser->setDaqID(daqNum); //set the daq numerical id for the config parser
-            //configParser->setDaqID(daqID); //CM 8/10/15 - set the daq id for the config parser - string identifier from the resource string used to initialize the driver session
-
-            //configParser->parseConfigFile("daq_config.txt"); //Take the file name of the config file and parse it
             //CM 8/10/15 - update to use standard string
             configParser->parseConfigFileStr("daq_config.txt"); //Take the file name of the config file and parse it
-\
+
             //CM 6/2/15 - grab the move path fromt he confog file and set the output move path to it
-            //movePath = configParser->getMovePath().toStdString();
             movePath = configParser->getMovePath();
             output->setMoveDir(movePath);
 
             //store the record size and sample rate specified in the config file
-            //recordSize = configParser->getRecordSize(); //CM 8/7/15 - changing record size to be the sample rate
             sampleRate = configParser->getSampleRate();
             recordSize = sampleRate; //CM 8/7/15 - each record will equal a second's worth of data (number of sample points per second)
 
-            //bufferSize = configParser->getRecordsPerWrite(); //CM 8/7/15 - update buffer size based on what is in the config file
             bufferSize = configParser->getSecondsPerFile(); //CM 8/7/15 - update buffer size based on how many seconds to be recorded per file.
                                                             //              This will be the number of records to be collect per file.
                                                             //              NOTE: THIS REMOVES HANDLING THE RECORD SIZE FROM THE USER
-
-            //debugging =======
-            //cout<<"Buffer size changed to: "<<bufferSize<<endl;
-            //=================
 
             //set global variables used as flags (see library.h for definitions ======
             ALL_CHANNEL_DATA = configParser->getStoreAllChannelData();
@@ -270,9 +218,7 @@ int DAQ::initialize(std::string ipAddress){
 bool DAQ:: continuousRawData(){
     bool loop = true; //CM 3/19/15
 
-    //debugging==============
     int numRecordsRecorded = 0; //count the real number of records seen before a write to disk is performed
-    //=======================
 
     try{
 
@@ -290,7 +236,6 @@ bool DAQ:: continuousRawData(){
                if(c == 'e'){
                    //close();
                    cout<<"Exiting..."<<endl;
-                   //return false; //return false signaling that collection should stop
                    loop = false;
 
                    //CM 8/17/15 - set the buffer full flag so whatever is in the buffer will get written out before exiting
@@ -346,22 +291,12 @@ bool DAQ:: continuousRawData(){
 
                      //======================================================================================================
 
-                     //======================================================
-                     /*
-                     //CM 7/10/15 - remove to make way for using std::strings
-                     QString* channelsString = new QString(p); //holds the comma separated list of channels as a QString
-                     channelIDs = channelsString->split(","); //split along commas, returns a QStringList
-                     QStringList activeChannelList; //store the channel names that have sensors on them
-                     */
-                     //======================================================
-
                      std::string currentChannel;
 
                      int numChannelsWithNoSensor = 0;
 
                      //iterate over the channels to find out which channel(s) have sensors
                      for(int i = 0; i < numPhysicalChannels;i++){
-                         //currentChannel = channelIDs.at(i).toStdString();
                          currentChannel = channelIDs.at(i); //CM 7/10/15 - using string
                          //if channel has no sensor
                          if( (driver->Channels->Item[currentChannel.c_str()]->Overload->Status) & 0x20){
@@ -369,7 +304,6 @@ bool DAQ:: continuousRawData(){
                          }
                          //otherwise, channel has a sensor, so record which one
                          else{
-                            //activeChannelList.append(QString(currentChannel.c_str()));
                              activeChannelList.push_back(currentChannel); //CM 7/10/15 - using string
                          }
                      }
@@ -381,16 +315,12 @@ bool DAQ:: continuousRawData(){
                      for(int i = 0; i < activeChannelList.size();i++){
                          //if at the last active channel, do not add a comma
                          if(i == activeChannelList.size()-1){
-                             //std::cout<<activeChannelList.at(i).toStdString()<<std::endl;
                              std::cout<<activeChannelList.at(i)<<std::endl; //CM 7/10/15 - using string
                          }
                          //otherwise, more channels to go, so add a comma
                          else{
-                            //std::cout<<activeChannelList.at(i).toStdString()<<", ";
                              std::cout<<activeChannelList.at(i)<<", "; //CM 7/10/15 - using string
                          }
-                         //store the channel number (in the sequence of channel IDs) and the channel ID
-                         //int channelIndex = channelIDs.lastIndexOf(activeChannelList.at(i)); //get the index of the active channel from the channel ID list
 
                          //====================================================================================================
                          //CM 7/10/15 - iterate through the vector looking for the active channel index in the vector of channel IDs
@@ -405,11 +335,6 @@ bool DAQ:: continuousRawData(){
                              }
                          }
                          //====================================================================================================
-
-
-                         //QPair<int,QString> bundle = QPair<int,QString>(channelIndex,activeChannelList.at(i));
-                         //QPair<int,std::string> bundle = QPair<int,std::string>(channelIndex,activeChannelList.at(i)); //change to using std::string
-                         //activeChannels.append(bundle);
 
                          //CM 8/7/15 - remove use of Qt data structures ========================
                          pair<int,std::string> bundleStd = pair<int,std::string>(channelIndex,activeChannelList.at(i)); //change to using std::string
@@ -458,6 +383,8 @@ bool DAQ:: continuousRawData(){
 
 
 
+                 //CM 8/20/15 - keep the following in case needed in future, the current solution is used above.
+                 //    NOTE: This is being kept since some useful math was figured out and I do not want to remove it just yet
                  /*I was doing a special ratio for a progress bar, but easiest is to just print out the
                   * current record number (i.e., the current second of data being collected)
 
@@ -513,22 +440,16 @@ bool DAQ:: continuousRawData(){
                  appendToData(sData);
                  sData = NULL;
 
-                 //testing =============================
-                 /*
-                 // Release SAFEARRAYs and BSTRs
-                 ::SafeArrayDestroy(data);
-                 ::SafeArrayDestroy(ts_frac);
-                 ::SafeArrayDestroy(ts_sec);
-                 */
-                 //=====================================
-
                  ts_sec = NULL;
                  ts_frac = NULL;
                  data = NULL;
 
-                 //CM 7/24/15 - releasing BSTRs ==================== for some reason this causes a crash with 5 DAQs
-  //               ::SysFreeString(channels);
-  //               ::SysFreeString(addl_data);
+                 //CM 7/24/15 - releasing BSTRs ==================== for some reason this causes a crash with 5 DAQs but not 1
+                 //     For the 1 DAQ, there is no memory leak.
+                 //     POSSIBLE FIX: store these variables in the Sensor_Data object
+                 //     and treat like the other SAFEARRAYs stored (including release of memory in the Sensor_Data object)
+                 //::SysFreeString(channels);
+                 //::SysFreeString(addl_data);
                  //=================================================
 
                 //check to see if the buffer is full, if so, then exit collection loop so data can be written to disk
@@ -571,7 +492,7 @@ bool DAQ:: continuousRawData(){
             std::this_thread::sleep_for (std::chrono::milliseconds(5)); //CM 5/8/15 - give system a rest
 
         }
-        //driver->Measurement->Abort(); //CM 5/8/15 - stop measurment until next cycle
+
     }
     catch (_com_error& e)
     {
@@ -613,9 +534,6 @@ void DAQ::appendToData(Sensor_Data *sd){
    if(numCollectedRecords >= bufferSize){
        bufferFull = true;
 
-       //testing =======
-       //std::cout<<"BUFFER IS FULL"<<std::endl;
-       //===============
    }
 
 }
@@ -630,11 +548,7 @@ void DAQ::writeDAQDataToFile(){
     //output->writeDaqDataToFile(&sensorData,recordSize,sampleRate,&channelIDs, numPhysicalChannels, activeChannels, daqID);
 
     //CM 7/10/15 - change to using std::string
-    //output->writeDaqDataToFile_standard_string(&sensorData,recordSize,sampleRate,&channelIDs, numPhysicalChannels, activeChannels, daqID);
     output->writeDaqDataToFile(&sensorData, recordSize, sampleRate, &channelIDs, numPhysicalChannels, activeChannelsStd, daqID);
-
-    //CM 7/17/15 - change to using a vector (or just write the double value as it comes from the SAFEARRAY)
-    //output->writeDaqDataToFile_vector(&sensorData,recordSize,sampleRate,&channelIDs, numPhysicalChannels, activeChannels, daqID);
 }
 
 
@@ -658,31 +572,8 @@ int DAQ::close(){
 
     driver->Close();
 
-    // Clean up our SafeArrays and BSTRs and close the connection
-    /*
-	::SafeArrayDestroy(data);
-	::SafeArrayDestroy(ts_frac);
-	::SafeArrayDestroy(ts_sec);
 
-	::SysFreeString(channels);
-	::SysFreeString(addl_data);
-*/
 	::CoUninitialize();
-
-    //CM 8/13/15 - move my memory clean-up until after closing the driver ======
-    /*
-    delete output;
-    delete configParser;
-
-    std::vector<Sensor_Data*>::iterator it;
-
-    //clean up memory for the sensor data vector stored
-    for(it = sensorData.begin(); it != sensorData.end(); it++){
-        delete *it;
-    }
-    */
-    //==========================================================================
-
 
 	return 0;
 }
@@ -711,13 +602,8 @@ bool DAQ::clearBuffer(){ //empty the buffer (data parameter)so new data can be c
         }
         //==============================================================================
 
-        //CM 7/24/15 - releasing BSTRs ====================
-        //::SysFreeString(channels);
-        //::SysFreeString(addl_data);
-        //=================================================
 
         sensorData.clear();//reserve the buffer size again since clear() reduces the size of the buffer to 0
-//        sensorData.reserve(bufferSize*2);  //CM 5/26/15 - reserve twice to handle buffer overflow
 
         bufferFull = false; //CM 5/11/15 - reset buffer full flag
 
