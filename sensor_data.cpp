@@ -20,6 +20,8 @@ Sensor_Data::~Sensor_Data()
     ::SafeArrayDestroy(timeFraction);
 }
 
+//implement all the setters and getters
+
 int Sensor_Data::getNumRecords(){
     return numRecords;
 }
