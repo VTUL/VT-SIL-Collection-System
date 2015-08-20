@@ -1,0 +1,20 @@
+﻿#DAQ configuration set-up description
+#All lines begin with a special identifier for a values
+#	DAQ; A —> A is the DAQ ID number, e.g., for daq1 use A = 1
+#	0; B —> set clock frequency
+#	1; C —> set prescaler
+#	2; D —> set sample rate
+#	3; E -> length in seconds of each file produced
+#	4; Move Path —> set the path where collection files are stored locally, NOTE: need quotes around path and \\ instead of \.
+#	5; Store all channel data --> bool to specify to store all channel data, or just channels with sensors, value: 1 to store all, value 0: only with sensors
+#	6; Display records to be collected on DAQ --> this will show how many records are currently on the DAQ. This is good for monitoring if the records are being produced faster than can be collected and processed. This shows if the collection program can keep up with the DAQ.
+#
+#	DAQ --> begin of configuration parameters for DAQ
+DAQ
+0;204800
+1;1
+2;1600
+3;60
+4;"C:\\Users\\itsloaner\\Downloads\\SIL_Collection_Data"
+5;0
+6;1
