@@ -10,7 +10,8 @@
 #ifndef TIMER_VARS
 #define TIMER_VARS
 
-extern time_t startTime,endTime;
+extern time_t startTime,endTime; //Global timing variables for clocking user specified sections of code.
+                                 //     NOTE: see note below about current usage.
 extern int ALL_CHANNEL_DATA; //Pull all the samples on all channels despite whether or not a channel has a connected sensor
                              //   Value = 0: only pull sensor data from channels with sensors
                              //   Value = 1: pull all sensor data
