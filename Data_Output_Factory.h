@@ -7,6 +7,8 @@
 *
 */
 
+//This class is used to create an object of the specified output type
+
 #ifndef __DATAOUTPUTFACTORY_H
 #define __DATAOUTPUTFACTORY_H
 

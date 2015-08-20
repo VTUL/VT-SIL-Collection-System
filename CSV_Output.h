@@ -1,8 +1,6 @@
 #pragma once
 #include <map>
 #include <list>
-//#include <QStringList>
-//#include <QPair>
 #include "Data_Output.h"
 #include "sensor_data.h"
 
@@ -18,10 +16,6 @@ public:
 
 
     //CM 5/18/15 - pass necessary information to write sensor data to CSV file
-    //void writeDaqDataToFile(std::vector<Sensor_Data*>* sensorData, int recordSize, double sampleRate, QStringList* channelIDs, int numPhysicalChannels, QList<QPair<int, QString> > activeChannels,std::string daqID);
-    //void writeDaqDataToFile_standard_string(std::vector<Sensor_Data*>* sensorData, int recordSize, double sampleRate, std::vector<std::string>* channelIDs, int numPhysicalChannels, QList<QPair<int, std::string> > activeChannels,std::string daqID);
-    //void writeDaqDataToFile_standard_string_orig(std::vector<Sensor_Data*>* sensorData, int recordSize, double sampleRate, std::vector<std::string>* channelIDs, int numPhysicalChannels, QList<QPair<int, std::string> > activeChannels,std::string daqID);
-   // void writeDaqDataToFile_vector(std::vector<Sensor_Data*>* sensorData, int recordSize, double sampleRate, std::vector<std::string>* channelIDs, int numPhysicalChannels, QList<QPair<int, std::string> > activeChannels,std::string daqID);
     void writeDaqDataToFile_standard_string_remove_qt(std::vector<Sensor_Data*>* sensorData, int recordSize, double sampleRate, std::vector<std::string>* channelIDs, int numPhysicalChannels, std::list< std::pair<int,std::string> > activeChannels, std::string daqID);
 
     std::string getMoveDir(); //get the move directory
@@ -54,9 +48,6 @@ private:
     std::string currentFileName;    //CM 4/14/15 - the current open file that is being written to
     std::string moveDir;            //CM 4/16/15 - the directory to move output files once writing is complete for a certain file
     std::string workingDir;         //CM 4/16/15 - the directory holding the current output files to be moved to the moveDir
-
-    //QString outputStr;
-    //QString headerStr;
 
     //CM 7/9/15 - changing to use regular strings for speed-up, QString.toStdString() is too slow (by about 5x)
     std::string outputStdStr;

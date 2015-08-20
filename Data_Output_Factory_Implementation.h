@@ -14,8 +14,8 @@
 #include "Data_Output_Factory.h"
 #include "CSV_Output.h"
 
-////////////////////////////////////////////////////////////////////////////////////PocketFactory()
-//Default constructor for PocketFactory
+////////////////////////////////////////////////////////////////////////////////////Data_Output_Factory()
+//Default constructor for Data_Output_Factory
 //
 //Parameters:
 //		none
@@ -46,19 +46,16 @@ Data_Output_Factory::Data_Output_Factory(){
 //
 Data_Output* Data_Output_Factory::CreateDataOutput(OutputType type){
 	Data_Output* BasePtr = NULL;  //base pointer 
-	CSV_Output* newCSVOutput = NULL; //Xcode 3.2 makes me declare the variable outside of the switch statement
-	//hence, I need to have this here :-/
+    CSV_Output* newCSVOutput = NULL;
 
 	switch (type){
-	case CSV:
-		
-		//Equality_Pocket<GenericElement*>* newEP_genElement = new(nothrow) Equality_Pocket<GenericElement*>();
-		newCSVOutput = new CSV_Output();
-		BasePtr = &*newCSVOutput;
-		break;
+        case CSV:
+            newCSVOutput = new CSV_Output();
+            BasePtr = &*newCSVOutput;
+            break;
 
-	default:
-		break;
+        default:
+            break;
 	}
 
 	return BasePtr; //return the base pointer

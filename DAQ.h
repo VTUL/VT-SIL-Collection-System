@@ -9,8 +9,6 @@
 #include <map>
 #include <string>
 #include <list>
-//#include <QStringList>
-//#include <QPair>
 
 //to provide support for safearrays
 #import "IviDriverTypeLib.dll" no_namespace
@@ -70,12 +68,11 @@ private:
     int recordSize; //CM 5/18/15 - the number of data points in a record, used to parse the data stream appropriately for each channel's data
     double sampleRate; //CM 5/21/15 - record the sample rate of the DAQ (across the board for all sensors connected to the DAQ)
 
-    //QList< QPair<int,QString> > activeChannels; //CM 5/22/15 - store which channels are active (connected to sensors), this is a list
-                                                //  of tuples that represent the channel number and channel ID string. The channel number
-                                                //  comes from the linear order of channels returned from the DAQs. E.g., if 2!CH7 has
-                                                //  a sensor and it is number 7 of 64 sensors, its channel number is 7.
-    //QList< QPair<int,std::string> > activeChannels; //CM 7/10/15 - change to using std::string
-    list< pair<int,std::string> > activeChannelsStd; //CM 7/10/15 - change to using no qt data structures
+    list< pair<int,std::string> > activeChannelsStd; //CM 7/10/15 - change to using no qt data structures,
+                                                     //  Store which channels are active (connected to sensors), this is a list
+                                                     //  of tuples that represent the channel number and channel ID string. The channel number
+                                                     //  comes from the linear order of channels returned from the DAQs. E.g., if 2!CH7 has
+                                                     //  a sensor and it is number 7 of 64 sensors, its channel number is 7.
 
     std::vector<Sensor_Data*> sensorData; //CM 5/26/15 - the sensor data returned from a memory read of the DAQ, each object is the result
                                           //  of a memory read
@@ -87,7 +84,6 @@ private:
 
     Config_Parser* configParser; //CM 6/1/15 - parser to load parameters for the DAQ
     std::string movePath; //CM 6/2/15 - the local path where data files are moved once completed
-
 
 };
 

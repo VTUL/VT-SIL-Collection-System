@@ -15,7 +15,7 @@
 #ifndef __DAQ_INTERFACE_H
 #define __DAQ_INTERFACE_H
 
-//This class controlls the action of the DAQs the system is connected to.
+//This class controlls the action of the DAQ(s) the system is connected to.
 //  This includes:
 //      - Initializing them based on the hostnames of the daq(s) provided
 //      - controlling the collection/writing cycle of all daq(s)
