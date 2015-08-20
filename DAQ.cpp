@@ -231,7 +231,8 @@ bool DAQ:: continuousRawData(){
             char c;
             if(kbhit()){
                c = getch();
-               printf("You have pressed: %c\n", c);
+               //printf("\n\nYou have pressed: %c\n", c);
+               cout<<endl<<endl<<"Shutdown signal received."<<endl;
 
                if(c == 'e'){
                    //close();
