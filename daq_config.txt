@@ -15,6 +15,6 @@ DAQ
 1;1
 2;1600
 3;60
-4;"C:\\Users\\itsloaner\\Downloads\\SIL_Collection_Data"
+4;"E:\\VTI\\dData"
 5;0
 6;1
