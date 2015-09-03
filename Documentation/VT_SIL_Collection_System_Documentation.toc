@@ -1,0 +1,31 @@
+\contentsline {chapter}{Contents}{1}{chapter*.1}
+\contentsline {chapter}{List of Figures}{2}{chapter*.2}
+\contentsline {chapter}{\numberline {1}Overview}{3}{chapter.1}
+\contentsline {section}{\numberline {1.1}Overview of System Design}{3}{section.1.1}
+\contentsline {section}{\numberline {1.2}Overview of Code Flow}{3}{section.1.2}
+\contentsline {chapter}{\numberline {2}Documentation for each Class}{6}{chapter.2}
+\contentsline {subsection}{\numberline {2.0.1}main.cpp}{6}{subsection.2.0.1}
+\contentsline {subsection}{\numberline {2.0.2}DAQ\_Interface.h/cpp}{6}{subsection.2.0.2}
+\contentsline {subsection}{\numberline {2.0.3}DAQ.h/cpp}{6}{subsection.2.0.3}
+\contentsline {subsection}{\numberline {2.0.4}Data\_Output.h/cpp}{7}{subsection.2.0.4}
+\contentsline {subsection}{\numberline {2.0.5}Data\_Output\_Factory.h/Data\_Output\_Factory\_Implementation.h}{7}{subsection.2.0.5}
+\contentsline {subsection}{\numberline {2.0.6}CSV\_Output.h/cpp}{7}{subsection.2.0.6}
+\contentsline {subsection}{\numberline {2.0.7}config\_parser.h/cpp}{7}{subsection.2.0.7}
+\contentsline {subsection}{\numberline {2.0.8}library.h/cpp}{7}{subsection.2.0.8}
+\contentsline {subsection}{\numberline {2.0.9}sensor\_data.h/cpp}{7}{subsection.2.0.9}
+\contentsline {chapter}{\numberline {3}Hardware}{8}{chapter.3}
+\contentsline {chapter}{\numberline {4}Software}{9}{chapter.4}
+\contentsline {section}{\numberline {4.1}Data Pipeline}{9}{section.4.1}
+\contentsline {section}{\numberline {4.2}Configuration File}{10}{section.4.2}
+\contentsline {section}{\numberline {4.3}Parameters and Data Structures}{11}{section.4.3}
+\contentsline {section}{\numberline {4.4}Setting up Development Environment}{13}{section.4.4}
+\contentsline {section}{\numberline {4.5}Software Versioning}{13}{section.4.5}
+\contentsline {section}{\numberline {4.6}Code Base and Github}{14}{section.4.6}
+\contentsline {section}{\numberline {4.7}Running the System}{15}{section.4.7}
+\contentsline {section}{\numberline {4.8}Technical Details}{16}{section.4.8}
+\contentsline {section}{\numberline {4.9}Challenges and Solutions}{17}{section.4.9}
+\contentsline {subsection}{\numberline {4.9.1}DAQ Buffer Filling Up}{17}{subsection.4.9.1}
+\contentsline {subsection}{\numberline {4.9.2}Slow-down in Windows 8.1}{18}{subsection.4.9.2}
+\contentsline {section}{\numberline {4.10}Data Storage}{18}{section.4.10}
+\contentsline {chapter}{\numberline {5}Currently Known Problems}{19}{chapter.5}
+\contentsline {chapter}{\numberline {A}Github Reference Sheet}{20}{appendix.A}
