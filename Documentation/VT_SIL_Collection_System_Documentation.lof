@@ -1,0 +1,11 @@
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Collection system design.}}{4}{figure.1.1}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Collection cycle overview: The continuousRawData() stores data to a buffer until a specified timeframe has passed for collection, i.e., the time length of a file. Once this is reached, steps (5) $\rightarrow $ (6) $\rightarrow $ (7) $\rightarrow $ (8) are executed. Here the data is written to file, the buffer is flushed, and then data is collected for the next timeframe.}}{5}{figure.1.2}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Example of how versioning works. One starts with a \emph {master} version of the code. Then a \emph {working development} branch is created for development. When a new feature wants to be tested, a new branch is created (\emph {cool feature 1}). When the operation of the feature is satisfactory, that code is merged back into the \emph {working development}. When the \emph {working development} is stable, it is merged back into \emph {master}. }}{14}{figure.4.1}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Github reference sheet (page 1).}}{21}{figure.A.1}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Github reference sheet (page 2).}}{22}{figure.A.2}

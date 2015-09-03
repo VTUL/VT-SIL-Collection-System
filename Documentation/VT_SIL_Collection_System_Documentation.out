@@ -1,0 +1,31 @@
+\BOOKMARK [0][-]{chapter*.1}{Contents}{}% 1
+\BOOKMARK [0][-]{chapter*.2}{List of Figures}{}% 2
+\BOOKMARK [0][-]{chapter.1}{Overview}{}% 3
+\BOOKMARK [1][-]{section.1.1}{Overview of System Design}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.2}{Overview of Code Flow}{chapter.1}% 5
+\BOOKMARK [0][-]{chapter.2}{Documentation for each Class}{}% 6
+\BOOKMARK [1][-]{subsection.2.0.1}{main.cpp}{chapter.2}% 7
+\BOOKMARK [2][-]{subsection.2.0.2}{DAQ\137Interface.h/cpp}{subsection.2.0.1}% 8
+\BOOKMARK [2][-]{subsection.2.0.3}{DAQ.h/cpp}{subsection.2.0.1}% 9
+\BOOKMARK [2][-]{subsection.2.0.4}{Data\137Output.h/cpp}{subsection.2.0.1}% 10
+\BOOKMARK [2][-]{subsection.2.0.5}{Data\137Output\137Factory.h/Data\137Output\137Factory\137Implementation.h}{subsection.2.0.1}% 11
+\BOOKMARK [2][-]{subsection.2.0.6}{CSV\137Output.h/cpp}{subsection.2.0.1}% 12
+\BOOKMARK [2][-]{subsection.2.0.7}{config\137parser.h/cpp}{subsection.2.0.1}% 13
+\BOOKMARK [2][-]{subsection.2.0.8}{library.h/cpp}{subsection.2.0.1}% 14
+\BOOKMARK [2][-]{subsection.2.0.9}{sensor\137data.h/cpp}{subsection.2.0.1}% 15
+\BOOKMARK [0][-]{chapter.3}{Hardware}{}% 16
+\BOOKMARK [0][-]{chapter.4}{Software}{}% 17
+\BOOKMARK [1][-]{section.4.1}{Data Pipeline}{chapter.4}% 18
+\BOOKMARK [1][-]{section.4.2}{Configuration File}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.3}{Parameters and Data Structures}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.4}{Setting up Development Environment}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.5}{Software Versioning}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.6}{Code Base and Github}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.7}{Running the System}{chapter.4}% 24
+\BOOKMARK [1][-]{section.4.8}{Technical Details}{chapter.4}% 25
+\BOOKMARK [1][-]{section.4.9}{Challenges and Solutions}{chapter.4}% 26
+\BOOKMARK [2][-]{subsection.4.9.1}{DAQ Buffer Filling Up}{section.4.9}% 27
+\BOOKMARK [2][-]{subsection.4.9.2}{Slow-down in Windows 8.1}{section.4.9}% 28
+\BOOKMARK [1][-]{section.4.10}{Data Storage}{chapter.4}% 29
+\BOOKMARK [0][-]{chapter.5}{Currently Known Problems}{}% 30
+\BOOKMARK [0][-]{appendix.A}{Github Reference Sheet}{}% 31
