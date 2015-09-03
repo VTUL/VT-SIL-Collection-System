@@ -494,7 +494,7 @@ Assuming, the user already understands versioning of software, the following com
 	\item git add
 	\item git rm
 	\item git commit -m ``useful message"
-	\item git push origin [current branch-name]
+	\item git push origin [current\_branch\_name]
 \end{itemize}
 \textbf{Please refer to Appendix \ref{appendix_github_reference_sheet} for more details and explanations on git commands.}
 
@@ -505,7 +505,24 @@ When committing changes and saving to github, perform the following commands:
 	\item git commit -m ``useful message" $\rightarrow$ Commit changes to the local repository on the computer. The message is for describing what the changes are.
 	\item git push origin [current branch-name] $\rightarrow$ Pushes the changes to github.
 \end{itemize}
-To see what the current branch-name is, use the command: git branch.
+To see what the current branch-name is, use the command: 
+\begin{itemize}
+	\item git branch
+\end{itemize}	
+To change branches, use the command: 
+\begin{itemize}
+	\item git checkout $<$branch\_name$>$
+\end{itemize}
+
+In order to download and allow synching with a specific branch on github that you do not currently have on your machine, use the following command:
+\begin{itemize}
+	\item git checkout -b some\_branch origin/branch\_name
+\end{itemize}
+For example, to to get the branch \textit{cool\_branch}, the command is: 
+\begin{itemize}
+	\item git checkout -b cool\_branch origin/cool\_branch
+\end{itemize}
+\textbf{NOTE: Do not use spaces in your branch names!!}
 
 
 

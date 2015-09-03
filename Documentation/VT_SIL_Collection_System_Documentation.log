@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  3 SEP 2015 09:59
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  3 SEP 2015 10:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -576,20 +576,16 @@ l.112
 ]
 Chapter 1.
 Package epstopdf Info: Source file: <figures/DAQ_collection_system_design.eps>
-(epstopdf)                    date: 2015-08-20 15:25:42
+(epstopdf)                    date: 2015-09-03 10:07:33
 (epstopdf)                    size: 95875 bytes
 (epstopdf)             Output file: <figures/DAQ_collection_system_design-eps-c
 onverted-to.pdf>
+(epstopdf)                    date: 2015-09-03 10:07:33
+(epstopdf)                    size: 23104 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/DAQ_collection_sys
 tem_design-eps-converted-to.pdf figures/DAQ_collection_system_design.eps>
 (epstopdf)             \includegraphics on input line 133.
-runsystem(repstopdf --outfile=figures/DAQ_collection_system_design-eps-converte
-d-to.pdf figures/DAQ_collection_system_design.eps)...executed safely (allowed).
-
-Package epstopdf Info: Result file: <figures/DAQ_collection_system_design-eps-c
-onverted-to.pdf>
-(epstopdf)                    date: 2015-09-03 09:59:42
-(epstopdf)                    size: 23104 bytes.
+Package epstopdf Info: Output file is already uptodate.
 
 <figures/DAQ_collection_system_design-eps-converted-to.pdf, id=232, 978.65625pt
  x 898.35625pt>
@@ -602,22 +598,17 @@ pdf used on input line 133.
 (pdftex.def)             Requested size: 397.48499pt x 364.87408pt.
 Package epstopdf Info: Source file: <figures/DAQ_collection_system_code_flow.ep
 s>
-(epstopdf)                    date: 2015-08-20 15:05:36
+(epstopdf)                    date: 2015-09-03 10:07:33
 (epstopdf)                    size: 168656 bytes
 (epstopdf)             Output file: <figures/DAQ_collection_system_code_flow-ep
 s-converted-to.pdf>
+(epstopdf)                    date: 2015-09-03 10:07:33
+(epstopdf)                    size: 36175 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/DAQ_collection_sys
 tem_code_flow-eps-converted-to.pdf figures/DAQ_collection_system_code_flow.eps>
 
 (epstopdf)             \includegraphics on input line 161.
-runsystem(repstopdf --outfile=figures/DAQ_collection_system_code_flow-eps-conve
-rted-to.pdf figures/DAQ_collection_system_code_flow.eps)...executed safely (all
-owed).
-
-Package epstopdf Info: Result file: <figures/DAQ_collection_system_code_flow-ep
-s-converted-to.pdf>
-(epstopdf)                    date: 2015-09-03 09:59:44
-(epstopdf)                    size: 36175 bytes.
+Package epstopdf Info: Output file is already uptodate.
 
 <figures/DAQ_collection_system_code_flow-eps-converted-to.pdf, id=240, 986.6862
 5pt x 1445.4pt>
@@ -680,20 +671,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 334--335
 
 [11] [12]
 Package epstopdf Info: Source file: <figures/Version_Control_Flow.eps>
-(epstopdf)                    date: 2015-08-21 09:40:05
+(epstopdf)                    date: 2015-09-03 10:07:33
 (epstopdf)                    size: 70408 bytes
 (epstopdf)             Output file: <figures/Version_Control_Flow-eps-converted
 -to.pdf>
+(epstopdf)                    date: 2015-09-03 10:07:33
+(epstopdf)                    size: 18200 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/Version_Control_Fl
 ow-eps-converted-to.pdf figures/Version_Control_Flow.eps>
 (epstopdf)             \includegraphics on input line 470.
-runsystem(repstopdf --outfile=figures/Version_Control_Flow-eps-converted-to.pdf
- figures/Version_Control_Flow.eps)...executed safely (allowed).
-
-Package epstopdf Info: Result file: <figures/Version_Control_Flow-eps-converted
--to.pdf>
-(epstopdf)                    date: 2015-09-03 09:59:45
-(epstopdf)                    size: 18200 bytes.
+Package epstopdf Info: Output file is already uptodate.
 
 <figures/Version_Control_Flow-eps-converted-to.pdf, id=341, 828.09375pt x 401.5
 pt>
@@ -716,7 +703,8 @@ ier (name{figure.4.1}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.498 \end{itemize}
                     <./figures/Version_Control_Flow-eps-converted-to.pdf>]
-Overfull \hbox (7.14444pt too wide) in paragraph at lines 544--545
+[15]
+Overfull \hbox (7.14444pt too wide) in paragraph at lines 561--562
 []\OT1/cmr/m/n/12 Release: C:\OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 Users\OMS/cmsy/m
 /n/12 n$\OML/cmm/m/it/12 <$\OT1/cmr/m/n/12 user name$\OML/cmm/m/it/12 >$\OMS/cm
 sy/m/n/12 n\OT1/cmr/m/n/12 Documents\OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 Github \O
@@ -724,43 +712,39 @@ MS/cmsy/m/n/12 n\OT1/cmr/m/n/12 VT[]SIL[]DAQ[]Interface\OMS/cmsy/m/n/12 n\OT1/c
 mr/m/n/12 build\OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 release\OMS/cmsy/m/n/12 n 
  []
 
-[15]
+[16]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 585.
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 588.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 602.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 605.
 
  (/usr/local/texlive/2013/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 588.
- [16]
-Overfull \hbox (7.37054pt too wide) in paragraph at lines 624--625
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 605.
+ [17]
+Overfull \hbox (7.37054pt too wide) in paragraph at lines 641--642
 \OT1/cmr/m/n/12 in-cludes us-ing the C++ out-put op-er-a-tor $\OML/cmm/m/it/12 
 <<$ \OT1/cmr/m/n/12 and C style writ-ing to disk (out-Stream(buffer,size)
  []
 
-[17] [18]
+[18]
 Chapter 5.
 [19
 
 ]
 Appendix A.
 Package epstopdf Info: Source file: <figures/Github_reference_sheet_pg_1.eps>
-(epstopdf)                    date: 2015-08-19 15:23:06
+(epstopdf)                    date: 2015-09-03 10:07:33
 (epstopdf)                    size: 4087570 bytes
 (epstopdf)             Output file: <figures/Github_reference_sheet_pg_1-eps-co
 nverted-to.pdf>
+(epstopdf)                    date: 2015-09-03 10:07:33
+(epstopdf)                    size: 569242 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/Github_reference_s
 heet_pg_1-eps-converted-to.pdf figures/Github_reference_sheet_pg_1.eps>
-(epstopdf)             \includegraphics on input line 670.
-runsystem(repstopdf --outfile=figures/Github_reference_sheet_pg_1-eps-converted
--to.pdf figures/Github_reference_sheet_pg_1.eps)...executed safely (allowed).
-
-Package epstopdf Info: Result file: <figures/Github_reference_sheet_pg_1-eps-co
-nverted-to.pdf>
-(epstopdf)                    date: 2015-09-03 09:59:46
-(epstopdf)                    size: 569242 bytes.
+(epstopdf)             \includegraphics on input line 687.
+Package epstopdf Info: Output file is already uptodate.
 
 <figures/Github_reference_sheet_pg_1-eps-converted-to.pdf, id=424, 614.295pt x 
 794.97pt>
@@ -768,31 +752,27 @@ File: figures/Github_reference_sheet_pg_1-eps-converted-to.pdf Graphic file (ty
 pe pdf)
  <use figures/Github_reference_sheet_pg_1-eps-converted-to.pdf>
 Package pdftex.def Info: figures/Github_reference_sheet_pg_1-eps-converted-to.p
-df used on input line 670.
+df used on input line 687.
 (pdftex.def)             Requested size: 542.025pt x 701.49236pt.
 
-Overfull \hbox (41.541pt too wide) in paragraph at lines 670--671
+Overfull \hbox (41.541pt too wide) in paragraph at lines 687--688
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 47.83337pt on input line 675.
+LaTeX Warning: Float too large for page by 47.83337pt on input line 692.
 
 Package epstopdf Info: Source file: <figures/Github_reference_sheet_pg_2.eps>
-(epstopdf)                    date: 2015-08-19 15:26:07
+(epstopdf)                    date: 2015-09-03 10:07:33
 (epstopdf)                    size: 4585051 bytes
 (epstopdf)             Output file: <figures/Github_reference_sheet_pg_2-eps-co
 nverted-to.pdf>
+(epstopdf)                    date: 2015-09-03 10:07:33
+(epstopdf)                    size: 608813 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/Github_reference_s
 heet_pg_2-eps-converted-to.pdf figures/Github_reference_sheet_pg_2.eps>
-(epstopdf)             \includegraphics on input line 679.
-runsystem(repstopdf --outfile=figures/Github_reference_sheet_pg_2-eps-converted
--to.pdf figures/Github_reference_sheet_pg_2.eps)...executed safely (allowed).
-
-Package epstopdf Info: Result file: <figures/Github_reference_sheet_pg_2-eps-co
-nverted-to.pdf>
-(epstopdf)                    date: 2015-09-03 09:59:47
-(epstopdf)                    size: 608813 bytes.
+(epstopdf)             \includegraphics on input line 696.
+Package epstopdf Info: Output file is already uptodate.
 
 <figures/Github_reference_sheet_pg_2-eps-converted-to.pdf, id=425, 614.295pt x 
 794.97pt>
@@ -800,22 +780,22 @@ File: figures/Github_reference_sheet_pg_2-eps-converted-to.pdf Graphic file (ty
 pe pdf)
  <use figures/Github_reference_sheet_pg_2-eps-converted-to.pdf>
 Package pdftex.def Info: figures/Github_reference_sheet_pg_2-eps-converted-to.p
-df used on input line 679.
+df used on input line 696.
 (pdftex.def)             Requested size: 542.025pt x 701.49236pt.
 
-Overfull \hbox (41.541pt too wide) in paragraph at lines 679--680
+Overfull \hbox (41.541pt too wide) in paragraph at lines 696--697
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 47.83337pt on input line 684.
+LaTeX Warning: Float too large for page by 47.83337pt on input line 701.
 
 
 Package bibentry Warning: You have used \nobibliography* 
 (bibentry)                without a following \bibliography.
 (bibentry)                You may not be able to run BibTeX.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 687.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 704.
 [20
 
 ] [21pdfTeX warning (ext4): destination with the same identifier (name{figure.A
@@ -823,19 +803,19 @@ Package atveryend Info: Empty hook `BeforeClearDocument' on input line 687.
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.687 \end{document}
+l.704 \end{document}
                      <./figures/Github_reference_sheet_pg_1-eps-converted-to.pd
 f>] [22pdfTeX warning (ext4): destination with the same identifier (name{figure
 .A.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.687 \end{document}
+l.704 \end{document}
                      <./figures/Github_reference_sheet_pg_2-eps-converted-to.pd
 f>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 687.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 704.
  (./VT_SIL_Collection_System_Documentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 687.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 704.
 
 
  *File List*
@@ -928,23 +908,23 @@ figures/Github_reference_sheet_pg_1-eps-converted-to.pdf
 figures/Github_reference_sheet_pg_2-eps-converted-to.pdf
  ***********
 
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 687.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 704.
 Package rerunfilecheck Info: File `VT_SIL_Collection_System_Documentation.out' 
 has not changed.
 (rerunfilecheck)             Checksum: A8051F6E861FFEEE762D912BF92D821C;2102.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 687.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 704.
  ) 
 Here is how much of TeX's memory you used:
- 10085 strings out of 493315
- 146183 string characters out of 6137904
+ 10084 strings out of 493315
+ 146173 string characters out of 6137904
  312796 words of memory out of 5000000
- 13289 multiletter control sequences out of 15000+600000
+ 13288 multiletter control sequences out of 15000+600000
  11883 words of font info for 43 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 37i,9n,39p,711b,2355s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,9n,39p,711b,1825s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
@@ -958,7 +938,7 @@ live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/te
 xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texl
 ive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on VT_SIL_Collection_System_Documentation.pdf (23 pages, 1436933
+Output written on VT_SIL_Collection_System_Documentation.pdf (23 pages, 1437888
  bytes).
 PDF statistics:
  515 PDF objects out of 1000 (max. 8388607)
