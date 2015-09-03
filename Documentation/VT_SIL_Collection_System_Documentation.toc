@@ -22,10 +22,10 @@
 \contentsline {section}{\numberline {4.5}Software Versioning}{13}{section.4.5}
 \contentsline {section}{\numberline {4.6}Code Base and Github}{14}{section.4.6}
 \contentsline {section}{\numberline {4.7}Running the System}{15}{section.4.7}
-\contentsline {section}{\numberline {4.8}Technical Details}{16}{section.4.8}
-\contentsline {section}{\numberline {4.9}Challenges and Solutions}{17}{section.4.9}
-\contentsline {subsection}{\numberline {4.9.1}DAQ Buffer Filling Up}{17}{subsection.4.9.1}
+\contentsline {section}{\numberline {4.8}Technical Details}{17}{section.4.8}
+\contentsline {section}{\numberline {4.9}Challenges and Solutions}{18}{section.4.9}
+\contentsline {subsection}{\numberline {4.9.1}DAQ Buffer Filling Up}{18}{subsection.4.9.1}
 \contentsline {subsection}{\numberline {4.9.2}Slow-down in Windows 8.1}{18}{subsection.4.9.2}
-\contentsline {section}{\numberline {4.10}Data Storage}{18}{section.4.10}
-\contentsline {chapter}{\numberline {5}Currently Known Problems}{19}{chapter.5}
-\contentsline {chapter}{\numberline {A}Github Reference Sheet}{20}{appendix.A}
+\contentsline {section}{\numberline {4.10}Data Storage}{19}{section.4.10}
+\contentsline {chapter}{\numberline {5}Currently Known Problems}{20}{chapter.5}
+\contentsline {chapter}{\numberline {A}Github Reference Sheet}{21}{appendix.A}
